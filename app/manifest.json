@@ -15,33 +15,24 @@
     ]
   },
   "permissions": [
-    "tabs",
-    "http://*/*",
-    "https://*/*",
-    "pageCapture",
-    "webRequest",
-    "*://*.google.com/",
-    "*://*/*data.json*"
+    "tabs"
   ],
   "content_scripts": [
     {
       "matches": [
-        "http://*/*",
-        "https://*/*"
+        "https://jira.cpgswtools.com/secure/RapidBoard.jspa*"
       ],
       "js": [
         "scripts/contentscript.js"
       ],
-      "run_at": "document_end",
+      "run_at": "document_start",
       "all_frames": false
     }
   ],
   "page_action": {
     "default_icon": {
-      "19": "images/icon-19.png",
-      "38": "images/icon-38.png"
+      "32": "images/icon-32.png"
     },
-    "default_title": "JIRAHelper",
-    "default_popup": "popup.html"
+    "default_title": "jirahelper"
   }
 }
